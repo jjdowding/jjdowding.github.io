@@ -1,20 +1,122 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" value="Jamie Dowding - Full-stack PHP Developer">
+        
+        <title>Jamie Dowding - Full-stack PHP Developer</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
         <style>
-            body{
-                margin: 0;
+            /* cyrillic-ext */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+            }
+            /* cyrillic */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            }
+            /* vietnamese */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            /* cyrillic-ext */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gTD_vx3rCubqg.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+            }
+            /* cyrillic */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3g3D_vx3rCubqg.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            }
+            /* vietnamese */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gbD_vx3rCubqg.woff2) format('woff2');
+                unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+            }
+            /* latin-ext */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gfD_vx3rCubqg.woff2) format('woff2');
+                unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gnD_vx3rCs.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+
+
+            body {
+                background: #000;
+                margin: 0;  
                 font-family: 'Montserrat', sans-serif;
-                color: #4d4d4d;
+                color: #fff;
                 font-size: 100%;
             }
 
-            main{
-                height: 100vh;
-                width: 100vw;
+            #background {
+                filter: blur(3px);
             }
 
+            main{
+                position:absolute;
+                height: 100vh;
+                width: 100vw;
+                z-index: 1;
+            }
 
             .layout{
                 display: flex;
@@ -51,7 +153,6 @@
                 border-bottom: 1px dashed;
             }
         </style>
-
     </head>
     <body>
         <main role="main" class="layout layout--center">
@@ -59,16 +160,119 @@
                 <h1 class="text--h1">
                     Jamie Dowding
                 </h1>
-                <h3 class="text--h3">
+                <h2 class="text--h3">
                     Full-stack PHP Developer
-                </h3>
+                </h2>
 
                 <p>
-                    I currently build stuff at <a target="_blank" href="https://www.crowdfunder.co.uk">Crowdfunder</a>
+                    I currently build stuff at <a target="_blank" rel="noopener" href="https://www.crowdfunder.co.uk">Crowdfunder</a>
                 </p>
 
             </section>
-
-        </div>
+        </main>
+        <canvas id="background"></canvas>
     </body>
+
+    <script>
+        (function () {
+            const fps = 10;
+
+            const canvas = document.querySelector('#background');
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const ctx = canvas.getContext('2d');
+
+            const size = 20;
+            const space = 15;
+            const delta = size + (space * 2);
+
+            const square = (ctx, x, y, colour) => {
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = colour;
+                // half pixel offset for crispness
+                ctx.strokeRect(x + 0.5, y+0.5, size, size);
+            }
+
+            const circle = (ctx, x, y, colour) => {
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = colour;
+
+                const radius = (size/2);
+
+                // half pixel offset for crispness
+                ctx.beginPath();
+                ctx.arc(x + radius + 0.5, y + radius + 0.5, radius + 0.5, 0 ,2 * Math.PI);
+                ctx.stroke();
+            }
+
+            const triangle = (ctx, x, y, colour) => {
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = colour;
+
+                const radius = (size/2);
+
+                // half pixel offset for crispness
+                ctx.beginPath();
+                ctx.moveTo(x, y + size);
+                ctx.lineTo(x + size, y + size);
+                ctx.lineTo(x + radius, y);
+                ctx.lineTo(x, y + size);
+                ctx.stroke();
+            }
+
+            const ex = (ctx, x, y, colour) => {
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = colour;
+
+                const radius = (size/2);
+
+                // half pixel offset for crispness
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(x + size, y + size);
+                ctx.moveTo(x, y + size);
+                ctx.lineTo(x + size, y);
+                ctx.stroke();
+            }
+
+            const shapes = [circle, square, triangle, ex];
+            const colours = ["#ef476f","#ffd166","#06d6a0","#118ab2","#073b4c"];
+
+            const draw = () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let x = space;
+                let y = space; 
+
+                while (x < canvas.width && y < canvas.height) {
+
+                    const shape = shapes[Math.floor(Math.random() * shapes.length)];
+                    const color = colours[Math.floor(Math.random() * colours.length)];
+
+                    
+                    shape(ctx, x, y, color);
+                    
+                    x = x + delta;
+                    
+                    if (x >= canvas.width) {
+                        x = space;
+                        y = y + delta
+                    }
+                }
+
+                setTimeout(() => {
+                    window.requestAnimationFrame(draw);
+                }, 1000 / fps)
+            
+            }
+
+            window.requestAnimationFrame(draw);
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        })();
+    </script>
 </html>
